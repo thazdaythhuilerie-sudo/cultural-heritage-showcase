@@ -96,7 +96,7 @@ export const lyrics = [
   "أَيُّها المَبْعوثُ فينا", "جِئْتَ بِالأَمْرِ المُطاعْ", "جِئْتَ شَرَّفْتَ المَدينَة", "مَرْحَباً يا خَيْرَ داعْ",
 ];
 
-export const ui: Record<string, T> = {
+export const ui = {
   republic: { ar: "الجمهورية الجزائرية الديمقراطية الشعبية — وزارة الثقافة والفنون", fr: "République Algérienne Démocratique et Populaire — Ministère de la Culture et des Arts", en: "People's Democratic Republic of Algeria — Ministry of Culture and Arts" },
   edition: { ar: "الدورة 12 | قسنطينة", fr: "12ᵉ édition | Constantine", en: "12th Edition | Constantine" },
   title: { ar: "المهرجان الثقافي الدولي للإنشاد", fr: "Festival Culturel International de l'Inshad", en: "International Cultural Festival of Inshad" },
@@ -135,4 +135,4 @@ export const ui: Record<string, T> = {
   singTitle: { ar: "ننشد معاً", fr: "Chantons ensemble", en: "Let's Sing Together" },
   close: { ar: "إغلاق", fr: "Fermer", en: "Close" }, play: { ar: "تشغيل", fr: "Lecture", en: "Play" }, pause: { ar: "إيقاف", fr: "Pause", en: "Pause" },
   tempo: { ar: "الإيقاع", fr: "Tempo", en: "Tempo" },
-};
+} satisfies Record<string, T>;

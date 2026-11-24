@@ -37,7 +37,7 @@ function Index() {
   return (
     <div dir={dir} className="paper min-h-screen overflow-x-hidden text-foreground">
       {/* top bar */}
-      <div className="bg-wine py-1.5 text-center text-xs text-primary-foreground/80">{t(ui.republic!)}</div>
+      <div className="bg-wine py-1.5 text-center text-xs text-primary-foreground/80">{t(ui.republic)}</div>
       <nav className="sticky top-0 z-40 border-b border-border bg-background/85 backdrop-blur">
         <div className="mx-auto flex max-w-7xl items-center gap-4 px-4 py-2">
           <img src={logoInshad.url} alt="Logo Inshad" className="h-12 w-auto" />
@@ -48,7 +48,7 @@ function Index() {
             ))}
           </div>
           <div className="ms-auto flex items-center gap-2">
-            <button onClick={() => setSing(true)} className="rounded-sm bg-primary px-3 py-2 text-sm font-semibold text-primary-foreground shadow hover:bg-wine">♪ {t(ui.qr!)}</button>
+            <button onClick={() => setSing(true)} className="rounded-sm bg-primary px-3 py-2 text-sm font-semibold text-primary-foreground shadow hover:bg-wine">♪ {t(ui.qr)}</button>
             <div className="flex overflow-hidden rounded-sm border border-border text-xs">
               {(["ar", "fr", "en"] as Lang[]).map((l) => (
                 <button key={l} onClick={() => setLang(l)} className={`px-2 py-1.5 uppercase ${lang === l ? "bg-accent text-accent-foreground font-bold" : "hover:bg-muted"}`}>{l}</button>
@@ -64,12 +64,12 @@ function Index() {
         <div className="absolute inset-0 bg-gradient-to-t from-wine via-wine/40 to-transparent" />
         <div className="relative mx-auto grid max-w-7xl gap-10 px-4 pb-32 pt-20 md:grid-cols-[1.3fr_1fr] md:pt-28">
           <div>
-            <span className="inline-block rotate-[-2deg] border-2 border-gold px-3 py-1 text-sm font-bold text-gold">{t(ui.edition!)}</span>
-            <h1 className={`mt-6 text-5xl md:text-7xl ${lang === "ar" ? "leading-[1.3]" : "headline"}`}>{t(ui.title!)}</h1>
-            <p className="mt-5 max-w-xl text-xl text-gold md:text-2xl" style={{ fontFamily: "var(--font-arabic)" }}>« {t(ui.theme!)} »</p>
+            <span className="inline-block rotate-[-2deg] border-2 border-gold px-3 py-1 text-sm font-bold text-gold">{t(ui.edition)}</span>
+            <h1 className={`mt-6 text-5xl md:text-7xl ${lang === "ar" ? "leading-[1.3]" : "headline"}`}>{t(ui.title)}</h1>
+            <p className="mt-5 max-w-xl text-xl text-gold md:text-2xl" style={{ fontFamily: "var(--font-arabic)" }}>« {t(ui.theme)} »</p>
             <div className="mt-8 flex flex-wrap gap-3">
-              <a href="#program" className="rounded-sm bg-gold px-5 py-3 font-semibold text-accent-foreground hover:brightness-110">{t(ui.ctaProgram!)}</a>
-              <a href="#digital" className="rounded-sm border border-primary-foreground/60 px-5 py-3 font-semibold hover:bg-primary-foreground/10">{t(ui.ctaDigital!)}</a>
+              <a href="#program" className="rounded-sm bg-gold px-5 py-3 font-semibold text-accent-foreground hover:brightness-110">{t(ui.ctaProgram)}</a>
+              <a href="#digital" className="rounded-sm border border-primary-foreground/60 px-5 py-3 font-semibold hover:bg-primary-foreground/10">{t(ui.ctaDigital)}</a>
             </div>
           </div>
           <div className="relative hidden md:block">
@@ -106,13 +106,13 @@ function Index() {
       <footer className="relative mt-24 bg-wine text-primary-foreground">
         <div className="h-6 w-full" style={{ backgroundImage: `url(${pattern})`, backgroundSize: "120px" }} />
         <div className="mx-auto max-w-7xl px-4 py-14">
-          <h2 className="text-3xl text-gold">{t(ui.partnersT!)}</h2>
+          <h2 className="text-3xl text-gold">{t(ui.partnersT)}</h2>
           <div className="mt-6 grid grid-cols-2 gap-3 md:grid-cols-4">
             {partners.map((p) => <div key={p.fr} className="border border-primary-foreground/20 p-4 text-sm">{t(p)}</div>)}
           </div>
           <div className="mt-10 flex flex-wrap items-center gap-4 border-t border-primary-foreground/20 pt-6 text-sm text-primary-foreground/70">
             <img src={logoInshad.url} alt="" className="h-14" /><img src={logoMin.url} alt="" className="h-14" />
-            <span>{t(ui.organizer!)} — {t(ui.edition!)}</span>
+            <span>{t(ui.organizer)} — {t(ui.edition)}</span>
           </div>
         </div>
       </footer>
@@ -123,12 +123,12 @@ function Index() {
           <div className="stamp mx-auto w-72">
             <div className="border-2 border-dashed border-primary p-5 text-center">
               <img src={logoInshad.url} alt="" className="mx-auto h-16" />
-              <div className="mt-2 text-xs text-muted-foreground">{t(ui.edition!)}</div>
-              <div className="headline mt-2 text-2xl text-primary">{t(ui.night!)} {ticket}</div>
+              <div className="mt-2 text-xs text-muted-foreground">{t(ui.edition)}</div>
+              <div className="headline mt-2 text-2xl text-primary">{t(ui.night)} {ticket}</div>
               <div className="mt-1 text-sm">{t(nights[ticket - 1]!.title)}</div>
               <QR />
               <div className="text-xs text-muted-foreground">المسرح الجهوي محمد الطاهر فرقاني</div>
-              <button onClick={() => { setTicket(null); setSing(true); }} className="mt-3 text-sm font-semibold text-primary underline">♪ {t(ui.singTitle!)}</button>
+              <button onClick={() => { setTicket(null); setSing(true); }} className="mt-3 text-sm font-semibold text-primary underline">♪ {t(ui.singTitle)}</button>
             </div>
           </div>
         </Modal>
@@ -153,7 +153,7 @@ function Program({ lang, onTicket }: { lang: Lang; onTicket: (n: number) => void
   const [sel, setSel] = useState(0);
   const n = nights[sel]!;
   return (
-    <Section id="program" kicker={ui.ax1![lang]}>
+    <Section id="program" kicker={ui.ax1[lang]}>
       <div className="grid gap-10 md:grid-cols-[1fr_1.4fr]">
         <div className="relative">
           <img src={oud} alt="Oud" className="w-full mix-blend-multiply" />
@@ -162,7 +162,7 @@ function Program({ lang, onTicket }: { lang: Lang; onTicket: (n: number) => void
           <div className="flex flex-wrap gap-2">
             {nights.map((x, i) => (
               <button key={x.n} onClick={() => setSel(i)} className={`border px-4 py-2 text-sm font-semibold ${i === sel ? "border-primary bg-primary text-primary-foreground" : "border-border bg-card hover:border-gold"}`}>
-                {ui.night![lang]} {x.n}
+                {ui.night[lang]} {x.n}
               </button>
             ))}
           </div>
@@ -172,9 +172,9 @@ function Program({ lang, onTicket }: { lang: Lang; onTicket: (n: number) => void
             <ul className="mt-5 space-y-3">
               {n.parts.map((p) => <li key={p.fr} className="flex gap-3"><span className="text-gold">✦</span>{p[lang]}</li>)}
             </ul>
-            <button onClick={() => onTicket(n.n)} className="mt-6 rounded-sm bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground hover:bg-wine">▣ {ui.ticket![lang]}</button>
+            <button onClick={() => onTicket(n.n)} className="mt-6 rounded-sm bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground hover:bg-wine">▣ {ui.ticket[lang]}</button>
           </div>
-          <div className="mt-6 border-s-4 border-gold bg-secondary p-4 text-sm text-secondary-foreground">⚖ {ui.legal![lang]}</div>
+          <div className="mt-6 border-s-4 border-gold bg-secondary p-4 text-sm text-secondary-foreground">⚖ {ui.legal[lang]}</div>
         </div>
       </div>
     </Section>
@@ -183,18 +183,18 @@ function Program({ lang, onTicket }: { lang: Lang; onTicket: (n: number) => void
 
 function City({ lang }: { lang: Lang }) {
   return (
-    <Section id="city" kicker={ui.ax23![lang]}>
+    <Section id="city" kicker={ui.ax23[lang]}>
       <div className="grid gap-6 md:grid-cols-3">
         <div className="polaroid rotate-[-2deg]">
           <img src={theater} alt="Théâtre régional de Constantine" className="aspect-square w-full object-cover" />
-          <h3 className="mt-4 text-2xl text-primary">{ui.citySings![lang]}</h3>
-          <p className="text-sm text-muted-foreground">{ui.citySingsD![lang]}</p>
+          <h3 className="mt-4 text-2xl text-primary">{ui.citySings[lang]}</h3>
+          <p className="text-sm text-muted-foreground">{ui.citySingsD[lang]}</p>
         </div>
         <div className="flex flex-col justify-between bg-emerald p-8 text-primary-foreground shadow-lg md:col-span-2">
           <div>
             <div className="text-5xl">🚋</div>
-            <h3 className="mt-3 text-4xl">{ui.tram![lang]}</h3>
-            <p className="mt-3 max-w-lg text-primary-foreground/85">{ui.tramD![lang]}</p>
+            <h3 className="mt-3 text-4xl">{ui.tram[lang]}</h3>
+            <p className="mt-3 max-w-lg text-primary-foreground/85">{ui.tramD[lang]}</p>
           </div>
           <div className="mt-6 flex items-center gap-4"><div className="w-24 bg-card p-1"><QR small /></div><span className="text-sm text-gold">SETRAM × Inshad</span></div>
         </div>
@@ -202,12 +202,12 @@ function City({ lang }: { lang: Lang }) {
       <div className="mt-10 grid gap-8 bg-wine p-8 text-primary-foreground md:grid-cols-[1fr_1.2fr]" style={{ backgroundImage: `linear-gradient(var(--wine), oklch(0.24 0.08 10 / 88%)), url(${pattern})`, backgroundSize: "auto, 200px" }}>
         <div className="stamp rotate-2"><img src={stampImg} alt="Pont" /></div>
         <div>
-          <h3 className="text-4xl text-gold">{ui.bridgesT![lang]}</h3>
-          <p className="mt-2 text-primary-foreground/80">{ui.bridgesD![lang]}</p>
+          <h3 className="text-4xl text-gold">{ui.bridgesT[lang]}</h3>
+          <p className="mt-2 text-primary-foreground/80">{ui.bridgesD[lang]}</p>
           <div className="mt-6 grid grid-cols-2 gap-3">
             {bridges.map((b, i) => <div key={b.fr} className="border border-gold/40 p-3"><span className="text-gold">0{i + 1}</span> {b[lang]}</div>)}
           </div>
-          <h4 className="mt-8 font-semibold text-gold">{ui.roadmapT![lang]}</h4>
+          <h4 className="mt-8 font-semibold text-gold">{ui.roadmapT[lang]}</h4>
           <ol className="mt-3 grid grid-cols-2 gap-2 text-sm md:grid-cols-4">
             {roadmap.map((r, i) => <li key={r.fr} className="border-t-2 border-gold pt-2">{i + 1}. {r[lang]}</li>)}
           </ol>
@@ -220,8 +220,8 @@ function City({ lang }: { lang: Lang }) {
 function Lab({ lang }: { lang: Lang }) {
   const [tab, setTab] = useState(0);
   return (
-    <Section id="lab" kicker={ui.ax45![lang]}>
-      <p className="max-w-3xl text-2xl text-primary" style={{ fontFamily: "var(--font-arabic)" }}>{ui.uni![lang]}</p>
+    <Section id="lab" kicker={ui.ax45[lang]}>
+      <p className="max-w-3xl text-2xl text-primary" style={{ fontFamily: "var(--font-arabic)" }}>{ui.uni[lang]}</p>
       <div className="mt-8 grid gap-6 md:grid-cols-[260px_1fr]">
         <div className="flex flex-col gap-2">
           {labTabs.map((x, i) => (
@@ -243,11 +243,11 @@ function Digital({ lang, onApply }: { lang: Lang; onApply: (s: string) => void }
   const list = useMemo(() => archive.filter((a) => a.title.toLowerCase().includes(q.toLowerCase()) && (!c || a.country === c) && (!m || a.maqam === m)), [q, c, m]);
   const sel = "border border-border bg-card px-3 py-2 text-sm";
   return (
-    <Section id="digital" kicker={ui.ax6![lang]}>
-      <h3 className="text-4xl text-primary">{ui.archiveT![lang]}</h3>
+    <Section id="digital" kicker={ui.ax6[lang]}>
+      <h3 className="text-4xl text-primary">{ui.archiveT[lang]}</h3>
       <div className="mt-5 flex flex-wrap gap-2">
-        <input value={q} onChange={(e) => setQ(e.target.value)} placeholder={ui.search![lang]} className={`${sel} flex-1`} />
-        <select value={c} onChange={(e) => setC(e.target.value)} className={sel}><option value="">{ui.all![lang]}</option>{[...new Set(archive.map((a) => a.country))].map((x) => <option key={x}>{x}</option>)}</select>
+        <input value={q} onChange={(e) => setQ(e.target.value)} placeholder={ui.search[lang]} className={`${sel} flex-1`} />
+        <select value={c} onChange={(e) => setC(e.target.value)} className={sel}><option value="">{ui.all[lang]}</option>{[...new Set(archive.map((a) => a.country))].map((x) => <option key={x}>{x}</option>)}</select>
         <select value={m} onChange={(e) => setM(e.target.value)} className={sel}><option value="">Maqam</option>{[...new Set(archive.map((a) => a.maqam))].map((x) => <option key={x}>{x}</option>)}</select>
       </div>
       <div className="mt-5 grid gap-3 md:grid-cols-2">
@@ -268,7 +268,7 @@ function Digital({ lang, onApply }: { lang: Lang; onApply: (s: string) => void }
           <div key={x.fr} className={`polaroid flex flex-col ${i % 2 ? "rotate-1" : "-rotate-1"}`}>
             <div className="grid aspect-[4/3] place-items-center bg-wine text-4xl text-gold" style={{ backgroundImage: `linear-gradient(oklch(0.24 0.08 10 / 80%), oklch(0.24 0.08 10 / 80%)), url(${pattern})`, backgroundSize: "auto, 120px" }}>🎙</div>
             <h4 className="mt-3 flex-1 font-semibold text-primary">{x[lang]}</h4>
-            <button onClick={() => onApply(x[lang])} className="mt-3 bg-gold px-3 py-2 text-sm font-semibold text-accent-foreground">{ui.submit![lang]}</button>
+            <button onClick={() => onApply(x[lang])} className="mt-3 bg-gold px-3 py-2 text-sm font-semibold text-accent-foreground">{ui.submit[lang]}</button>
           </div>
         ))}
       </div>
@@ -280,7 +280,7 @@ function Expo({ lang }: { lang: Lang }) {
   const [p, setP] = useState<number | null>(null); const [q, setQ] = useState("");
   const list = artisans.filter((a) => (p === null || a.pav === p) && (a.name + a.craft).toLowerCase().includes(q.toLowerCase()));
   return (
-    <Section id="expo" kicker={ui.ax7![lang]}>
+    <Section id="expo" kicker={ui.ax7[lang]}>
       <div className="grid gap-3 md:grid-cols-4">
         {pavilions.map((x, i) => (
           <button key={x.fr} onClick={() => setP(p === i ? null : i)} className={`p-5 text-start ${p === i ? "bg-primary text-primary-foreground" : "bg-card hover:shadow-md"}`}>
@@ -288,7 +288,7 @@ function Expo({ lang }: { lang: Lang }) {
           </button>
         ))}
       </div>
-      <input value={q} onChange={(e) => setQ(e.target.value)} placeholder={ui.search![lang]} className="mt-5 w-full border border-border bg-card px-3 py-2 text-sm" />
+      <input value={q} onChange={(e) => setQ(e.target.value)} placeholder={ui.search[lang]} className="mt-5 w-full border border-border bg-card px-3 py-2 text-sm" />
       <div className="mt-4 grid gap-3 sm:grid-cols-2 md:grid-cols-3">
         {list.map((a) => <div key={a.name} className="border-t-2 border-gold bg-card p-4"><div className="font-semibold">{a.name}</div><div className="text-xs text-muted-foreground">{a.craft} · {pavilions[a.pav]![lang]}</div></div>)}
       </div>
@@ -301,7 +301,7 @@ function Modal({ children, onClose, lang }: { children: ReactNode; onClose: () =
     <div className="fixed inset-0 z-50 grid place-items-center bg-wine/80 p-4" onClick={onClose}>
       <div onClick={(e) => e.stopPropagation()} className="relative w-full max-w-md">
         {children}
-        <button onClick={onClose} className="mx-auto mt-4 block text-sm text-primary-foreground underline">{ui.close![lang]}</button>
+        <button onClick={onClose} className="mx-auto mt-4 block text-sm text-primary-foreground underline">{ui.close[lang]}</button>
       </div>
     </div>
   );
@@ -318,16 +318,16 @@ function SingAlong({ lang, onClose }: { lang: Lang; onClose: () => void }) {
   return (
     <Modal onClose={onClose} lang={lang}>
       <div className="mx-auto w-80 rounded-[2.5rem] border-8 border-foreground bg-wine p-6 text-primary-foreground shadow-2xl">
-        <div className="text-center text-xs text-gold">♪ {ui.singTitle![lang]} — QR</div>
+        <div className="text-center text-xs text-gold">♪ {ui.singTitle[lang]} — QR</div>
         <div dir="rtl" className="mt-6 flex h-72 flex-col justify-center gap-3 text-center" style={{ fontFamily: "var(--font-arabic)" }}>
           {[-1, 0, 1].map((o) => { const k = (i + o + lyrics.length) % lyrics.length; return <p key={o} className={o === 0 ? "text-3xl text-gold transition-all" : "text-lg opacity-40"}>{lyrics[k]}</p>; })}
         </div>
         <div className="flex items-center justify-between gap-2">
           <button onClick={() => setI((x) => (x - 1 + lyrics.length) % lyrics.length)} className="px-2">⏮</button>
-          <button onClick={() => setPlay(!play)} className="rounded-full bg-gold px-4 py-1 text-sm font-bold text-accent-foreground">{play ? ui.pause![lang] : ui.play![lang]}</button>
+          <button onClick={() => setPlay(!play)} className="rounded-full bg-gold px-4 py-1 text-sm font-bold text-accent-foreground">{play ? ui.pause[lang] : ui.play[lang]}</button>
           <button onClick={() => setI((x) => (x + 1) % lyrics.length)} className="px-2">⏭</button>
         </div>
-        <label className="mt-4 block text-xs">{ui.tempo![lang]}: {tempo}s
+        <label className="mt-4 block text-xs">{ui.tempo[lang]}: {tempo}s
           <input type="range" min={1} max={6} value={tempo} onChange={(e) => setTempo(+e.target.value)} className="w-full accent-gold" />
         </label>
       </div>
@@ -342,12 +342,12 @@ function TalentForm({ lang, initiative, onClose }: { lang: Lang; initiative: str
     <Modal onClose={onClose} lang={lang}>
       <form onSubmit={(e) => { e.preventDefault(); setDone(true); }} className="tape space-y-3 bg-card p-6 shadow-xl">
         <h3 className="text-2xl text-primary">{initiative}</h3>
-        {done ? <p className="py-6 text-center text-lg">✦ {ui.thanks![lang]}</p> : <>
-          <input required placeholder={ui.name![lang]} className={f} />
+        {done ? <p className="py-6 text-center text-lg">✦ {ui.thanks[lang]}</p> : <>
+          <input required placeholder={ui.name[lang]} className={f} />
           <input required type="email" placeholder="Email" className={f} />
-          <input required placeholder={ui.country![lang]} className={f} />
-          <input required type="url" placeholder={ui.link![lang]} className={f} />
-          <button className="w-full bg-primary py-2 font-semibold text-primary-foreground">{ui.send![lang]}</button>
+          <input required placeholder={ui.country[lang]} className={f} />
+          <input required type="url" placeholder={ui.link[lang]} className={f} />
+          <button className="w-full bg-primary py-2 font-semibold text-primary-foreground">{ui.send[lang]}</button>
         </>}
       </form>
     </Modal>
